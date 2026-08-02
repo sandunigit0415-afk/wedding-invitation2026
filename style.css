@@ -149,7 +149,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 15px;
+   flex-wrap: wrap; /* Allows names to wrap onto two lines smoothly if the phone is too narrow */
+    gap: 8px 12px;
+    width: 100%;
 }
 
 .couple span {
@@ -170,7 +172,7 @@ body {
     color: #760031;
     font-size: 20px;
     letter-spacing: 1.5px;
-    font-weight: normal;
+    font-weight: bold;
     font-family: "Comic Sans MS", cursive, sans-serif;
   /*  text-transform: uppercase; */
     margin: 8px 0 12px 0;
