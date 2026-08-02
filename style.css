@@ -140,22 +140,23 @@ body {
     margin-bottom: 4px;
 }
 
-/* Couple Names */
+/* Couple Names (Fully Responsive) */
 .couple {
-    font-size: clamp(22px, 5vw, 42px);
+    font-size: clamp(22px, 5vw, 40px);
     font-weight: bold;
     color: #B6771D;
     margin: 15px 0;
     display: flex;
     justify-content: center;
     align-items: center;
-   flex-wrap: wrap; /* Allows names to wrap onto two lines smoothly if the phone is too narrow */
+    flex-wrap: wrap;
     gap: 8px 12px;
     width: 100%;
+    word-break: keep-all;
 }
 
 .couple span {
-    font-size: 20px;
+    font-size: clamp(18px, 4vw, 30px);
     font-weight: normal;
 }
 
@@ -172,9 +173,8 @@ body {
     color: #760031;
     font-size: 20px;
     letter-spacing: 1.5px;
-    font-weight: bold;
+    font-weight: normal;
     font-family: "Comic Sans MS", cursive, sans-serif;
-  /*  text-transform: uppercase; */
     margin: 8px 0 12px 0;
 }
 
@@ -263,13 +263,8 @@ body {
     }
 
     .couple {
-        font-size: 28px;
-        gap: 10px;
         margin: 10px 0;
-    }
-
-    .couple span {
-        font-size: 24px;
+        gap: 4px 8px;
     }
 
     .invite, .guest-title {
@@ -277,7 +272,7 @@ body {
     }
 
     .date-box {
-        font-size: 20px;
+        font-size: 18px;
         padding: 10px 5px;
         letter-spacing: 1px;
     }
