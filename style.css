@@ -1,0 +1,295 @@
+/* ===============================
+   GLOBAL SETTINGS
+================================ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #0b0b0b;
+    color: white;
+    font-family: 'Georgia', serif;
+    background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+        url("images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+/* ===============================
+   LOADING SCREEN
+================================ */
+#loading {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+}
+
+#loading h2 {
+    color: #D4AF37;
+    animation: fade 2s infinite;
+}
+
+/* ===============================
+   MAIN AREA & ENVELOPE
+================================ */
+#main {
+    display: none;
+    padding: 20px 15px;
+}
+
+#main h3 {
+    color: #D4AF37;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+#envelope {
+    font-size: min(45vw, 250px);
+    line-height: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.5s;
+    animation: pulse 2s infinite;
+    user-select: none;
+    margin-top: 50px;
+}
+
+#envelope:hover {
+    transform: scale(1.1);
+}
+
+#cardWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 10px;
+}
+
+/* ===============================
+   INVITATION CARD
+================================ */
+#invitation {
+    display: none;
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    background: #fdfcee; /* Cream parchment background */
+    padding: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-radius: 4px;
+}
+
+/* Decorative Outer Frame */
+.card {
+    border: 3px solid #b88b55;
+    padding: 6px;
+    background: transparent;
+}
+
+/* Inner Double Border Frame */
+.inner-card {
+    border: 2px solid #b88b55;
+    padding: 25px 20px 15px 20px;
+    text-align: center;
+    color: #9b7244;
+}
+
+/* Monogram Logo */
+.couple-photo img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 12px;
+}
+.location img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 12px;
+}
+
+/* Titles and Parents Text */
+.title {
+    font-size: 15px;
+    color: #9b7244;
+    margin: 4px 0;
+    font-family: 'Georgia', serif;
+}
+
+.together {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.parents {
+    font-size: 15px;
+    color: #9b7244;
+    line-height: 1.4;
+    margin-bottom: 4px;
+}
+
+/* Couple Names */
+.couple {
+    font-size: 19px;
+    font-weight: bold;
+    color: #B6771D;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.couple span {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+/* Invitation Copy */
+.invite {
+    letter-spacing: 1px;
+    font-size: 13px;
+    color: #9b7244;
+    margin: 8px 0;
+    text-transform: uppercase;
+}
+
+.guest-title {
+    color: #760031;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    font-weight: bolder;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+  /*  text-transform: uppercase; */
+    margin: 8px 0 12px 0;
+}
+
+.guest-line {
+    border-bottom: 2px dotted #b88b55;
+    width: 80%;
+    margin: 15px auto 10px auto;
+}
+
+/* Date Box */
+.date-box {
+    display: block;
+    width: 100%;
+    background: #b88b55;
+    color: #ffffff;
+    padding: 12px 10px;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 20px 0 15px 0;
+    text-transform: uppercase;
+}
+
+/* Ceremony & Venue Details */
+.time-heading {
+    color: #B6771D;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.sub-invite {
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 3px;
+    margin-bottom: 12px;
+}
+
+.venue-heading {
+    color: #9b7244;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+/* Footer / RSVP */
+.footer {
+    border-top: none;
+    padding-top: 25px;
+    font-size: 11px;
+    font-weight: bold;
+    color: #9b7244;
+    letter-spacing: 1px;
+}
+
+/* ===============================
+   ANIMATIONS & MEDIA QUERIES
+================================ */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fade {
+    50% { opacity: 0.4; }
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 600px) {
+    #invitation {
+        padding: 10px;
+    }
+
+    .inner-card {
+        padding: 18px 10px 12px 10px;
+    }
+
+    .couple-photo img {
+        width: 65px;
+    }
+
+    .title, .parents {
+        font-size: 13px;
+    }
+
+    .couple {
+        font-size: 28px;
+        gap: 10px;
+        margin: 10px 0;
+    }
+
+    .couple span {
+        font-size: 24px;
+    }
+
+    .invite, .guest-title {
+        font-size: 11px;
+    }
+
+    .date-box {
+        font-size: 20px;
+        padding: 10px 5px;
+        letter-spacing: 1px;
+    }
+
+    .time-heading {
+        font-size: 15px;
+    }
+
+    .venue-heading {
+        font-size: 13px;
+    }
+
+    .footer {
+        font-size: 9.5px;
+        padding-top: 10px;
+    }
+}
