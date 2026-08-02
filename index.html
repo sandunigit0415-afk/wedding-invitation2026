@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wedding Invitation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Music -->
+    <audio id="music" loop>
+        <source src="audio/wedding.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Loading Screen -->
+    <div id="loading">
+        <h2>Loading...</h2>
+    </div>
+
+    <!-- Main -->
+    <div id="main">
+        <h3>Click To Open</h3>
+        <div id="envelope">✉</div>
+
+        <!-- Invitation -->
+        <div id="cardWrapper">
+            <div id="invitation">
+                <div class="card">
+                    <div class="inner-card">
+
+                        <!-- Monogram Logo -->
+                        <div class="couple-photo">
+                            <img src="images/logo1.png" alt="DS Monogram">
+                        </div>
+
+                        <!-- Bride Parents -->
+                        <p class="title">LOVING DAUGHTER OF</p>
+                        <p class="parents">(Late) MR. LAKSHMAN SENAPALA & MRS. NANDANI WIJERATHNA</p>
+
+                        <p class="title together">Together With</p>
+
+                        <!-- Groom Parents -->
+                        <p class="title">LOVING SON OF</p>
+                        <p class="parents">MR. AJITH SISIRAKUMARA & MRS. NALINI ABEYSINGHE</p> 
+
+                        <hr style="border: none; border-top: 2px dashed wheat;" />
+
+                        <!-- Couple Names -->
+                        <p class="couple">
+                            SANDUNI GAYASHANI
+                            <span>&</span>
+                            DINITH ABHISHEK
+                        </p>
+
+                        <!-- Request Text -->
+                        <p class="invite">REQUEST THE HONOR OF YOUR PRESENCE OF</p>
+
+                        <div style="background-color:white;">
+                        <p class="guest-title" >
+                             <span id="guestName" ></span>  
+                        </p>
+                        </div>
+
+                        <p class="invite">ON THE OCCASION OF OUR MARRIAGE</p>
+
+                        <!-- Date -->
+                        <div class="date-box">
+                            AUGUST | 26 | 2026
+                        </div>
+
+                        <!-- Time Details -->
+                        <p class="time-heading">FROM 9.00 AM ONWARDS</p>
+                        <p class="invite sub-invite">(PORUWA CEREMONY AT 9.22 AM)</p>
+
+                        <!-- Venue Details -->
+                        <h4 class="venue-heading">at RESHEEN HOTEL & BANQUETS - KOTADENIYAWA</h4>
+
+                         <div class="location">
+                            <img src="images/qr-code.png" alt="DS Monogram">
+                            <BR>
+                             <p style="font-size: 10px; ">(SCAN LOCATION) </p>
+                        </div>
+
+                        <!-- RSVP Footer -->
+                        <div class="footer">
+                             <hr style="border-color: wheat;" /> <br>
+                            RSVP : NANDANI WIJERATHNA - 0772393908 | SANDUNI - 0760272062
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
