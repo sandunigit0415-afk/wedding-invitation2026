@@ -120,6 +120,25 @@
     </div>
 
     <script src="script.js"></script>
+
+<script>
+  // Function to get "guest" name from URL parameter (?guest=Name)
+  const urlParams = new URLSearchParams(window.location.search);
+  const guestName = urlParams.get('guest');
+
+  if (guestName) {
+    const phoneNumber = "94760272062";
+    
+    // Encoded message with Guest Name
+    const yesText = encodeURIComponent(`Hi! This is ${guestName}. Yes, I will be there to celebrate with you!`);
+    const noText = encodeURIComponent(`Hi! This is ${guestName}. Sorry, I won't be able to attend. Wishing you the best!`);
+
+    // Update the button links
+    document.getElementById('btn-yes').href = `https://wa.me/${phoneNumber}?text=${yesText}`;
+    document.getElementById('btn-no').href = `https://wa.me/${phoneNumber}?text=${noText}`;
+  }
+</script>
+    
 </body>
 
 </html>
